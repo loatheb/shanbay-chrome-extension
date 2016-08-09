@@ -30,7 +30,7 @@ Element.prototype.removeOthers = Element.prototype.removeOthers || function (fin
 Element.prototype.childOnly = Element.prototype.childOnly || function (tagName) {
   var lists = Array.prototype.slice.call(this.childNodes);
   // console.log(lists);
-    lists.forEach(function(ele, index, arr){
+  lists.forEach(function(ele, index, arr){
     var name = ele.nodeName.toLowerCase();
     if (name != tagName) {
       ele.remove();
@@ -38,10 +38,12 @@ Element.prototype.childOnly = Element.prototype.childOnly || function (tagName) 
   })
 }
 
-setTimeout(function(){
+window.onload = function(){
   // document.getElementsByTagName('header')[0].remove();
   document.getElementById('article').removeTo(document.body);
   document.getElementsByTagName('h1')[0].removeSibs();
   document.querySelector('.gs-container > .content__main-column--article').removeSibs();
   document.getElementsByClassName('content__article-body')[0].childOnly('p');
-}, 10000);
+  document.getElementsByClassName('content__meta-container')[0].remove();
+  document.getElementsByClassName('submeta')[0].remove();
+}
