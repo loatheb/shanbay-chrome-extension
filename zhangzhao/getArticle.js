@@ -2,7 +2,6 @@ Element.prototype.remove = Element.prototype.remove || function(){
   this.parentNode.removeChild(this);
 }
 
-
 Element.prototype.removeSibs = Element.prototype.removeSibs ||  function () {
     var self = this;
     var par = this.parentNode;
@@ -27,23 +26,37 @@ Element.prototype.removeOthers = Element.prototype.removeOthers || function (fin
   finalNode.appendChild(this);
 }
 
-Element.prototype.childOnly = Element.prototype.childOnly || function (tagName) {
+Element.prototype.childOnly = Element.prototype.childOnly || function () {
+  var num = 0;
+  var nameLists = Array.prototype.slice.call(arguments);
   var lists = Array.prototype.slice.call(this.childNodes);
-  // console.log(lists);
   lists.forEach(function(ele, index, arr){
     var name = ele.nodeName.toLowerCase();
-    if (name != tagName) {
+    if (nameLists.indexOf(name) === -1 ) {
       ele.remove();
+      num++;
     }
   })
-}
 
+  return num;
+}
+var advertise;
 window.onload = function(){
-  // document.getElementsByTagName('header')[0].remove();
+  var time = 'executeTime';
+  console.time(time);
+  handle();
+  while(advertise) {
+    advertise = document.getElementsByClassName('content__article-body')[0].childOnly('p', 'figure');
+    console.log(advertise);
+  }
+  console.timeEnd(time);
+}
+function handle() {
   document.getElementById('article').removeTo(document.body);
   document.getElementsByTagName('h1')[0].removeSibs();
   document.querySelector('.gs-container > .content__main-column--article').removeSibs();
-  document.getElementsByClassName('content__article-body')[0].childOnly('p');
   document.getElementsByClassName('content__meta-container')[0].remove();
   document.getElementsByClassName('submeta')[0].remove();
+  advertise = document.getElementsByClassName('content__article-body')[0].childOnly('p', 'figure');
+  console.log(advertise)
 }
