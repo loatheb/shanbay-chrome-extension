@@ -37,18 +37,24 @@ Element.prototype.childOnly = Element.prototype.childOnly || function () {
       num++;
     }
   })
-
   return num;
 }
+
+Element.prototype.css = Element.prototype.css || function () {
+  var property = arguments[0];
+  var value = arguments[1];
+
+  this.style[property] = value;
+}
+
 var advertise;
 window.onload = function(){
-  var time = 'executeTime';
+  var time = "all";
   console.time(time);
   handle();
-  while(advertise) {
+  setInterval(function(){
     advertise = document.getElementsByClassName('content__article-body')[0].childOnly('p', 'figure');
-    console.log(advertise);
-  }
+  }, 1000);
   console.timeEnd(time);
 }
 function handle() {
@@ -58,5 +64,11 @@ function handle() {
   document.getElementsByClassName('content__meta-container')[0].remove();
   document.getElementsByClassName('submeta')[0].remove();
   advertise = document.getElementsByClassName('content__article-body')[0].childOnly('p', 'figure');
-  console.log(advertise)
+
+  var lists = document.getElementsByClassName('content__main-column');
+  Array.prototype.slice.call(lists).forEach(function(ele, index, arr){
+    ele.css('margin', '0 auto');
+  })
+
+  console.log(advertise);
 }
