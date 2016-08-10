@@ -63,15 +63,9 @@ Element.prototype.css = Element.prototype.css || function () {
 var advertise;
 var height = window.innerHeight;
 var articleHeight = document.getElementById('article').clientHeight;
-window.onload = function(){
-  var time = "all";
-  console.time(time);
-  handle();
-  setInterval(function(){
-    advertise = document.getElementsByClassName('content__article-body')[0].childOnly('p', 'figure');
-  }, 1000);
-  console.timeEnd(time);
-}
+
+
+
 function handle() {
   document.getElementById('article').removeOnly(document.body);
   document.getElementsByTagName('h1')[0].removeSibs();
