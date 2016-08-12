@@ -1,0 +1,39 @@
+.dialog {
+    position:absolute;
+    background: white;
+    z-index: 1000;
+    padding: 20px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: none;
+}
+.dialog li {
+  list-style-position: initial;
+  list-style-type: none;
+}
+.dialog ul img {
+  display: inline-block;
+  cursor: pointer;
+}
+.btnLists {
+  postition: absolute;
+  bottom: 0px;
+  text-align: center;
+}
+.btnLists > ul {
+  display: inline-block;
+  margin: 0 auto;
+}
+.btnLists > ul > li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.btnLists > ul > li > button {
+  background-color: #f1f1f1;
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+  outline: none;
+  vertical-align: bottom;
+}
