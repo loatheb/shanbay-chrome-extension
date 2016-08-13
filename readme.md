@@ -16,13 +16,13 @@
 ## 预览
 使用前：
 
-![未使用插件前网页样式](https://github.com/zhangzhao77/chrome-extension/tree/master/imgs/before.png)
+![未使用插件前网页样式](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/before.png)
 
 使用后：
 
-![使用插件后的样式1](https://github.com/zhangzhao77/chrome-extension/tree/master/imgs/after1.png)
+![使用插件后的样式1](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/after1.png)
 
-![使用插件后的样式2](https://github.com/zhangzhao77/chrome-extension/tree/master/imgs/after2.png)
+![使用插件后的样式2](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/after2.png)
 
-![使用插件后的样式3](https://github.com/zhangzhao77/chrome-extension/tree/master/imgs/after3.png)
+![使用插件后的样式3](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/after3.png)
 
