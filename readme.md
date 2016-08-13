@@ -2,9 +2,9 @@
 >目前仅能在[https://www.theguardian.com/](https://www.theguardian.com/)下使用，支持任何一篇文章
 
 ## 功能特点
-1. ### 自动剔除网页中除文章外的其它元素（广告，评论等）
-2. ### 自动适应屏幕，将文章分页
-3. ### 通过调用扇贝网的单词查询API,双击即可对选中的单词进行中文释义
+### 1. 自动剔除网页中除文章外的其它元素（广告，评论等）
+### 2. 自动适应屏幕，将文章分页
+### 3. 通过调用扇贝网的单词查询API,双击即可对选中的单词进行中文释义
 
 ## 使用方法
 1. 点击[下载](https://github.com/zhangzhao77/chrome-extension/archive/master.zip)下载本项目到本地。
@@ -16,13 +16,13 @@
 ## 预览
 使用前：
 
-![未使用插件前网页样式](https://github.com/zhangzhao77/chrome-extension/imgs/before.png)
+![未使用插件前网页样式](https://github.com/zhangzhao77/chrome-extension/tree/master/imgs/before.png)
 
 使用后：
 
-![使用插件后的样式1](https://github.com/zhangzhao77/chrome-extension/imgs/after1.png)
+![使用插件后的样式1](https://github.com/zhangzhao77/chrome-extension/tree/master/imgs/after1.png)
 
-![使用插件后的样式2](https://github.com/zhangzhao77/chrome-extension/imgs/after2.png)
+![使用插件后的样式2](https://github.com/zhangzhao77/chrome-extension/tree/master/imgs/after2.png)
 
-![使用插件后的样式3](https://github.com/zhangzhao77/chrome-extension/imgs/after3.png)
+![使用插件后的样式3](https://github.com/zhangzhao77/chrome-extension/tree/master/imgs/after3.png)
 
