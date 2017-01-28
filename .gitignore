@@ -1,4 +1,6 @@
 *.pem
+*.crx
+
 node_modules
 shanbay/dist
 
