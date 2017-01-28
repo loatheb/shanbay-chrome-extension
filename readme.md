@@ -19,14 +19,18 @@
 3. `npm run build` 进行构建，之后即可通过 __chrome__ 进行重新打包使用。
 
 ## 预览
-使用前：
+**使用前:**
 
 ![未使用插件前网页样式](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/before.png)
 
-使用后：
+**使用后:**
 
 ![使用插件后的样式1](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/after1.png)
 
 ![使用插件后的样式2](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/after2.png)
 
 ![使用插件后的样式3](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/after3.png)
+
+## Feature
+* [ ] 增加 AMD 或者 ES6 import 的模块化引入，目前只是简单使用 `gulp-concat` 进行连接
+* [ ] 美化 UE
