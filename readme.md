@@ -31,6 +31,6 @@
 
 ![使用插件后的样式3](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/after3.png)
 
-## Feature
+## TODO
 * [ ] 增加 AMD 或者 ES6 import 的模块化引入，目前只是简单使用 `gulp-concat` 进行连接
 * [ ] 美化 UE
