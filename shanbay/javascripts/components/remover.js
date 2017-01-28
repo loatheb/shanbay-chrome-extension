@@ -1,7 +1,7 @@
 /* global qs qsa getArray */
 
 /* eslint no-unused-vars: 0 */
-var rmAd = function () {
+var remove = function () {
     var advertise;
 
     qs('#article').removeOnly(document.body);

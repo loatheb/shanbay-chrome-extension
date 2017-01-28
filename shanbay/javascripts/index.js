@@ -1,21 +1,22 @@
+/* global article Dialog remove Article Translate */
+/* eslint no-console: 0 */
+
 window.onload = function() {
     var ad = 'clear advertise', //记录清除广告的时间
         at = 'make pager'; //记录分页文章的时间
 
     console.time(ad);
-    rmAd(); //删除广告函数  主函数在 ./methods/removeAd.js
+    remove();
     console.timeEnd(ad);
 
     console.time(at);
     Article();
     console.timeEnd(at);
 
-
-
     var container = new Dialog();
     //实例化一个dialog
     article.onclick = function(event) {
-        var ts = "translate time";
+        var ts = 'translate time';
         // 监听点击事件，并记录一次查询的时间
         console.time(ts);
         var selection = window.getSelection();
@@ -42,8 +43,7 @@ window.onload = function() {
         } else {
             container.hide();
         }
-    }
-
+    };
 
     function getHtml(data) {
         var dialog = '<section>' + '<strong>' + data.content + '</strong>' + '</section>';
@@ -62,4 +62,4 @@ window.onload = function() {
 
         return dialog;
     }
-}
+};

@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/loatheb/shanbay-chrome-extension#readme",
   "devDependencies": {
+    "del": "^2.2.2",
     "eslint": "^3.14.1",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.2.0",
     "stylelint": "^7.7.1",
