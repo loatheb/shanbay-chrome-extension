@@ -1,5 +1,3 @@
-// created by zhangzhao
-
 function Article() {
   var body = document.body;
 

@@ -1,7 +1,5 @@
-//created by zhangzhao
 // 查询单词的实例的构造函数
 function Translate (word) {
-
   this.word = word;
   this.response = this.word in this.cashe
                   ? JSON.parse(this.cashe[this.word])
