@@ -5,7 +5,7 @@ const concat = require('gulp-concat');
 const del = require('del');
 
 const path = require('path');
-const buildPath = path.resolve(__dirname, '../', 'dist');
+const buildPath = path.resolve(__dirname, 'shanbay', 'dist');
 
 gulp.task('views', function () {
     return gulp.src('shanbay/views/index.pug')
