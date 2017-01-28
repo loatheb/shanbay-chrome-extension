@@ -13,6 +13,11 @@
 4. 进入[https://www.theguardian.com/](https://www.theguardian.com/) 选择任意一篇文章，等待之后便可以查看插件效果。
 5. 双击即可选中单词，之后进行中文释义。
 
+## 构建
+1. `npm i` 安装所有依赖。
+2. 在做适当更改和构建之后，`npm run lint` 进行代码静态检查。
+3. `npm build` 进行构建，之后即可通过 __chrome__ 进行重新打包使用。
+
 ## 预览
 使用前：
 
@@ -25,4 +30,3 @@
 ![使用插件后的样式2](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/after2.png)
 
 ![使用插件后的样式3](https://github.com/zhangzhao77/chrome-extension/blob/master/imgs/after3.png)
-
