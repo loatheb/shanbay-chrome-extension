@@ -1,1 +1,6 @@
 *.pem
+node_modules
+shanbay/dist
+
+npm-debug.log
+npm-debug.log*

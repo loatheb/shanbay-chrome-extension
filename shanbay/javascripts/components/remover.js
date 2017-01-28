@@ -1,4 +1,7 @@
-function rmAd() {
+/* global qs qsa getArray */
+
+/* eslint no-unused-vars: 0 */
+var rmAd = function () {
     var advertise;
 
     qs('#article').removeOnly(document.body);
@@ -13,8 +16,7 @@ function rmAd() {
     }, 1000);
 
     var lists = qsa('.content__main-column');
-    getArray(lists).forEach(function(ele, index, arr) {
+    getArray(lists).forEach(function(ele) {
         ele.css('margin', '0 auto');
     });
-
-}
+};

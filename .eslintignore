@@ -1,0 +1,4 @@
+# ignore all js files except shanbay/javascripts
+
+*.js
+!shanbay/javascripts/*.js
