@@ -1,7 +1,4 @@
-// dialog 构造函数
-
-/* eslint no-unused-vars: 0 */
-var Modal = function() {
+export default () => {
     var body = document.body;
 
     this.dialog = document.createElement('div');
@@ -11,7 +8,7 @@ var Modal = function() {
 
     this.property = {};
 
-    this.addContent = function(html) {
+    this.addContent = (html) => {
         this.dialog.innerHTML = html;
         return this;
     };
@@ -26,7 +23,6 @@ var Modal = function() {
     };
 
     this.pos = function(x, y) {
-
         var dialogX = x;
         var dialogY = y + 20;
         var width = this.dialog.clientWidth;
@@ -49,5 +45,3 @@ var Modal = function() {
         this.dialog.css('left', dialogX + 'px').css('top', dialogY + 'px');
     };
 };
-
-export default Modal;

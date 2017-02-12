@@ -11,12 +11,12 @@ export default () => {
     $('.submeta').remove();
     $('.content__article-body').childOnly('p', 'figure');
 
-    setInterval(function() {
+    setInterval(() => {
         $$('.content__article-body')[0].childOnly('p', 'figure');
     }, 1000);
 
     const lists = $$('.content__main-column');
-    [...lists].forEach(list => {
+    [...lists].forEach((list) => {
         list.css('margin', '0 auto');
     });
 };

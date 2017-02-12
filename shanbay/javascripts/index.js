@@ -3,7 +3,7 @@ import {
     Modal,
     Pager,
     Cleaner,
-    Translater
+    Translater,
 } from './components';
 
 const readyFn = () => {
