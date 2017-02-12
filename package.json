@@ -1,6 +1,6 @@
 {
   "name": "shanbay-chrome-extension",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A chrome extension to remove ads and translate words.",
   "main": "shanbay/dist/index.js",
   "scripts": {

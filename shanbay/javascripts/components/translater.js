@@ -1,5 +1,5 @@
 // 查询单词的实例的构造函数
-var Translate = function (word) {
+var Translater = function (word) {
     this.word = word;
     this.response = this.word in this.cache ?
         JSON.parse(this.cache[this.word]) :
@@ -32,3 +32,5 @@ Translate.prototype.getResponse = function() {
 
     return xhr.response;
 };
+
+export default Translater;

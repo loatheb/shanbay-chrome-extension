@@ -59,3 +59,5 @@ var Article = function () {
         }
     }
 };
+
+export default Article;
