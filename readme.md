@@ -1,5 +1,6 @@
 # 谷歌浏览器插件
 [![Build Status](https://travis-ci.org/loatheb/shanbay-chrome-extension.svg?branch=master)](https://travis-ci.org/loatheb/shanbay-chrome-extension)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 >目前仅能在[https://www.theguardian.com/](https://www.theguardian.com/)下使用，支持任何一篇文章
 
 ### 功能特点
