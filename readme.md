@@ -1,5 +1,5 @@
 # 谷歌浏览器插件
-[![Build Status](https://travis-ci.org/loatheb/shanbay-chrome-extension.svg?branch=master)](https://travis-ci.org/loatheb/shanbay-chrome-extension)
+[![Build Status](https://travis-ci.org/loatheb/shanbay-chrome-extension.svg?branch=master&foo=bar)](https://travis-ci.org/loatheb/shanbay-chrome-extension)
 >目前仅能在[https://www.theguardian.com/](https://www.theguardian.com/)下使用，支持任何一篇文章
 
 ### 功能特点
