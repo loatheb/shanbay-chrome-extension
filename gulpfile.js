@@ -1,42 +1,47 @@
 const gulp = require('gulp');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
 const less = require('gulp-less');
 const pug = require('gulp-pug');
-const concat = require('gulp-concat');
+const babel = require('gulp-babel');
 const del = require('del');
-
 const path = require('path');
+
 const buildPath = path.resolve(__dirname, 'shanbay', 'dist');
 
-gulp.task('views', function () {
+gulp.task('views', () => {
     return gulp.src('shanbay/views/index.pug')
         .pipe(pug())
         .pipe(gulp.dest(`${buildPath}`));
 });
 
-gulp.task('stylesheets', function () {
+gulp.task('stylesheets', () => {
     return gulp.src('shanbay/stylesheets/index.less')
         .pipe(less())
         .pipe(gulp.dest(`${buildPath}`));
 });
 
-gulp.task('javascripts', function () {
-    return gulp.src([
-            'shanbay/javascripts/utils/funs.js',
-            'shanbay/javascripts/utils/element.js',
-            'shanbay/javascripts/components/dialog.js',
-            'shanbay/javascripts/components/pager.js',
-            'shanbay/javascripts/components/remover.js',
-            'shanbay/javascripts/components/translater.js',
-            'shanbay/javascripts/index.js'
-        ])
-        .pipe(concat('index.js'))
-        .pipe(gulp.dest(`${buildPath}`));
+gulp.task('compile', () => {
+    return gulp.src('shanbay/javascripts/index.js')
+        .pipe(babel())
+        .pipe(gulp.dest(`${buildPath}`))
 });
 
-gulp.task('clean', function (cb) {
-    return del([`${buildPath}/dist`], cb);
+gulp.task('javascripts', ['compile'], () => {
+    return browserify(`shanbay/javascripts/index.js`).bundle()
+        .pipe(buffer())
+        .pipe(uglify())
+        .pipe(rename('app.js'))
+        .pipe(gulp.dest(`${buildPath}/index2.js`))
 });
 
-gulp.task('default', ['clean'], function() {
-    gulp.start('views', 'stylesheets', 'javascripts');
+gulp.task('clean', () => {
+    return del([`${buildPath}/dist`]);
+});
+
+gulp.task('default', ['clean'], () => {
+    gulp.start('views', 'javascripts', 'stylesheets');
 });

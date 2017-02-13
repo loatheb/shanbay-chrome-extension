@@ -1,6 +1,3 @@
-/* global qs qsa getArray*/
-
-/* eslint no-unused-vars: 0 */
 var Article = function () {
     var body = document.body;
 
