@@ -4,6 +4,7 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
+const concat = require('gulp-concat');
 const less = require('gulp-less');
 const pug = require('gulp-pug');
 const babel = require('gulp-babel');
@@ -25,23 +26,28 @@ gulp.task('stylesheets', () => {
 });
 
 gulp.task('compile', () => {
-    return gulp.src('shanbay/javascripts/index.js')
+    return gulp.src('shanbay/javascripts/**/*.js')
         .pipe(babel())
-        .pipe(gulp.dest(`${buildPath}`))
+        .pipe(gulp.dest(`${buildPath}/temp`))
 });
 
-gulp.task('javascripts', ['compile'], () => {
-    return browserify(`shanbay/javascripts/index.js`).bundle()
+gulp.task('browserify', ['compile'], function() {
+    return browserify(`${buildPath}/temp/index.js`)
+        .bundle()
+        .pipe(source('index.js'))
         .pipe(buffer())
         .pipe(uglify())
-        .pipe(rename('app.js'))
-        .pipe(gulp.dest(`${buildPath}/index2.js`))
+        .pipe(gulp.dest(`${buildPath}`));
 });
 
 gulp.task('clean', () => {
-    return del([`${buildPath}/dist`]);
+    del([`${buildPath}/*`]);
+});
+
+gulp.task('temp', ['browserify'], () => {
+    del([`${buildPath}/temp/**`]);
 });
 
 gulp.task('default', ['clean'], () => {
-    gulp.start('views', 'javascripts', 'stylesheets');
+    gulp.start('views', 'temp', 'stylesheets');
 });
